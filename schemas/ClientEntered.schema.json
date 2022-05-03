@@ -1,0 +1,31 @@
+{
+	"$id": "http://derivative.ca/signaling-api/ClientEntered.schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Client Entered",
+	"description": "A signaling message sent from the signaling server to a client to acknowledge that the client entered the signaling session and was registered by the signaling server.",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"description": "The mandatory Metadata dictionary describing the API version and its origin",
+			"$ref": "Metadata.schema.json"
+		},
+		"signalingType": {
+			"description": "The type of signaling message that is being sent or received",
+			"const": "ClientEntered"
+		},
+		"content": {
+			"description": "The content of the message being carried over the signaling API",
+			"type": "object",
+			"properties": {
+				"self": {
+					"description": "This client, as perceived by the signaling server",
+					"$ref": "Client.schema.json"
+				}
+			},
+			"required": ["self"]
+		}
+	},
+	"required": ["metadata", "signalingType", "content"],
+	"additionalProperties": false
+}

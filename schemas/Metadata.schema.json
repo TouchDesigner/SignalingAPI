@@ -1,0 +1,28 @@
+{
+	"$id": "http://derivative.ca/signaling-api/Metadata.schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Metadata",
+	"description": "The mandatory Metadata dictionary describing the API version and its origin",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"apiVersion": {
+			"description": "The version number of the Signaling API being implemented",
+			"type": "string"
+		},
+		"compVersion": {
+			"description": "The version number of the component, or the external application version number, from which the message originated",
+			"type": "string"
+		},
+		"compOrigin": {
+			"description": "The path of the component within the TouchDesigner project, or the URL of an external application, from which the message originated",
+			"type": "string"
+		},
+		"projectName": {
+			"description": "The name of the TouchDesigner project, or external application, from which the message originated",
+			"type": "string"
+		}
+	},
+	"required": ["apiVersion", "compVersion", "compOrigin", "projectName"],
+	"additionalProperties": false
+}

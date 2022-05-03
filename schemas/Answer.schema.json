@@ -1,0 +1,41 @@
+{
+	"$id": "http://derivative.ca/signaling-api/Answer.schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Answer",
+	"description": "A signaling message sent from a client with a WebRTC Answer to another client, and transiting through the signaling server",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"description": "The mandatory Metadata dictionary describing the API version and its origin",
+			"$ref": "Metadata.schema.json"
+		},
+		"signalingType": {
+			"description": "The type of signaling message that is being sent or received",
+			"const": "Answer"
+		},
+		"sender": {
+			"description": "The sender address in the format IP:port as perceived by the signaling server",
+			"type": "string",
+			"$comment": "This property is optional and will be filled by the server when not assigned from the sender itself"
+		},
+		"target": {
+			"description": "The target address in the format IP:port as set by the sender",
+			"type": "string",
+			"$comment": "In the context of a WebRTC session, this property is mandatory"
+		}, 
+		"content": {
+			"description": "The content of the message being carried over the signaling API",
+			"type": "object",
+			"properties": {
+				"sdp": {
+					"description": "The Session Description protocol (SDP) of the local peer following a WebRTC answer",
+					"type": "string"
+				}
+			},
+			"required": ["sdp"]
+		}
+	},
+	"required": ["metadata", "signalingType", "target", "content"],
+	"additionalProperties": false
+}

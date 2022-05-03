@@ -1,0 +1,32 @@
+{
+	"$id": "http://derivative.ca/signaling-api/Clients.schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Clients",
+	"description": "A signaling message sent from the signaling server to a client to make it aware of other signaling clients within the signaling session",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"description": "The mandatory Metadata dictionary describing the API version and its origin",
+			"$ref": "Metadata.schema.json"
+		},
+		"signalingType": {
+			"description": "The type of signaling message that is being sent or received",
+			"const": "Clients"
+		},
+		"content": {
+			"description": "The content of the message being carried over the signaling API",
+			"type": "object",
+			"properties": {
+				"clients": {
+					"description": "The list of other clients currently in the signaling session",
+					"type": "array",
+					"items": { "$ref": "Client.schema.json" }
+				}
+			},
+			"required": ["clients"]
+		}
+	},
+	"required": ["metadata", "signalingType", "content"],
+	"additionalProperties": false
+}
