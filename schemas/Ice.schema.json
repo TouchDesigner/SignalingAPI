@@ -40,7 +40,7 @@
 				},
 				"sdpMid": {
 					"description": "The media stream identification of the SDP candidate following a WebRTC RTCIceCandidate event",
-					"type": "integer",
+					"type": "string",
 					"$comment": "For more details about the sdpMid, please visit MDN https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
 				}
 			},
