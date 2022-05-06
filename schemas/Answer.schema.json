@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/Answer.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Answer",
 	"description": "A signaling message sent from a client with a WebRTC Answer to another client, and transiting through the signaling server",

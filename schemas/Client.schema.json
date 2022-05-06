@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/Client.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Client",
 	"description": "A Client as perceived by the signaling server or another client in the signaling session",

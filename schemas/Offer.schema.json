@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/Offer.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Offer",
 	"description": "A signaling message sent from a client with a WebRTC Offer to another client, and transiting through the signaling server",

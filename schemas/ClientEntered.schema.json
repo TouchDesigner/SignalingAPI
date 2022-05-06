@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/ClientEntered.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Client Entered",
 	"description": "A signaling message sent from the signaling server to a client to acknowledge that the client entered the signaling session and was registered by the signaling server.",

@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/ClientExit.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Client Exit",
 	"description": "A signaling message sent from the signaling server to clients in the signaling session to make them aware that a client left the signaling session.",

@@ -1,5 +1,4 @@
 {
-	"$id": "http://derivative.ca/signaling-api/Metadata.schema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Metadata",
 	"description": "The mandatory Metadata dictionary describing the API version and its origin",
