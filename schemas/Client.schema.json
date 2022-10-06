@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Client",
 	"description": "A Client as perceived by the signaling server or another client in the signaling session",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -14,10 +14,10 @@
 			"type": "string"
 		},
 		"properties": {
-			"description": "An arbitrary dictionary that can be used to carry custom properties across the signaling protocol. A 'domain' property should be available in the object.",
+			"description": "An arbitrary dictionary that can be used to carry custom properties across the signaling protocol. A 'domain' as well as a 'timeJoined' properties should be available in the object.",
 			"type": "object"
 		}
 	},
-	"required": ["id", "address", "properties"],
+	"required": ["id", "address"],
 	"additionalProperties": false
 }

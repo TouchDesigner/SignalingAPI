@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Ice",
 	"description": "A signaling message sent from a client with a WebRTC Ice to another client, and transiting through the signaling server",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 	"properties": {
 		"metadata": {
